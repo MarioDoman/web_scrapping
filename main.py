@@ -46,6 +46,8 @@ while True:
 
 # make BeautifulSoup
 html = driver.page_source
+driver.close()
+driver.quit()
 soup = BeautifulSoup(html, 'html.parser')
 table_body = soup.find('tbody')
 rows = table_body.find_all('tr')
